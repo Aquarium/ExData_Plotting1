@@ -2,7 +2,7 @@
 epc_data <- read.table("household_power_consumption.txt", header = TRUE, 
                        sep=";", na.strings = "?")
 epc_data$Date <- as.Date(epc_data$Date,"%d/%m/%Y")
-need_data <- subset(epc_data, Date >= "2007-02-01" & Date <= "2007-02-02", Date:Sub_metering_3)
+need_data <- subset(epc_data, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 #Plot 1
 png(file = "plot1.png")
